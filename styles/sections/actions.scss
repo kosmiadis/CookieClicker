@@ -1,0 +1,47 @@
+@mixin posessAllAvailableSpace {
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+div.actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(5,1fr);
+    justify-items: center;
+    
+
+    div {
+        border: 1px solid;
+    }
+
+    div.title {
+        @include posessAllAvailableSpace();
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        
+        p {
+            border: 1px solid;
+            font-size: 200%;
+            align-self: start;
+        }
+    }
+
+    div.play {
+        width: 100%;
+        @include posessAllAvailableSpace();    
+        & img {
+            width: 265px;
+        }
+    }
+
+    div.music {
+        @include posessAllAvailableSpace();    
+        
+        & input {
+            display: none;
+        }
+    }
+    
+}

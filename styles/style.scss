@@ -1,0 +1,9 @@
+@import "layout/starting-screen.scss";
+@import "sections/actions.scss";
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-color: rgb(199, 224, 247);
+    font-size: 100%;
+}
