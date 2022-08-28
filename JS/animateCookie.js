@@ -9,5 +9,4 @@ function animateCookie (cookie) {
 
 cookieImg.addEventListener('click', e => {
     animateCookie(cookieImg)
-
 })
