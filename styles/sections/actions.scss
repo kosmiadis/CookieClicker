@@ -2,7 +2,6 @@
     grid-column-start: 1;
     grid-column-end: -1;
 }
-
 @keyframes animateCookie {
 
     0% {
@@ -55,7 +54,7 @@ div.actions {
             width: 265px;
             
             &:active {
-                animation: animateCookie 0.1s;
+                animation: animateCookie 0.05s;
             }
         }
 

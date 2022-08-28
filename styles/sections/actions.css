@@ -48,5 +48,5 @@ div.actions div.play img {
 }
 
 div.actions div.play img:active {
-  animation: animateCookie 0.1s;
+  animation: animateCookie 0.05s;
 }
