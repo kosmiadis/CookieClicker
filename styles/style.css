@@ -2,19 +2,27 @@ div.starting-screen {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+}
+
+@keyframes animateCookie {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 div.actions {
+  min-height: 100vh;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-items: center;
-}
-
-div.actions div {
-  border: 1px solid;
 }
 
 div.actions div.title {
@@ -32,26 +40,24 @@ div.actions div.title p {
 }
 
 div.actions div.play {
+  border: 1px solid;
   width: 100%;
   grid-column-start: 1;
   grid-column-end: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 div.actions div.play img {
   width: 265px;
 }
 
-div.actions div.music {
-  grid-column-start: 1;
-  grid-column-end: -1;
-}
-
-div.actions div.music input {
-  display: none;
+div.actions div.play img:active {
+  animation: animateCookie 0.1s;
 }
 
 body {
-  min-height: 100vh;
   margin: 0;
   background-color: #c7e0f7;
   font-size: 100%;

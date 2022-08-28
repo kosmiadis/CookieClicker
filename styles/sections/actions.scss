@@ -3,19 +3,34 @@
     grid-column-end: -1;
 }
 
+@keyframes animateCookie {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 div.actions {
+    min-height: 100vh;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(5,1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-items: center;
     
 
-    div {
-        border: 1px solid;
-    }
+    
 
     div.title {
+        
         @include posessAllAvailableSpace();
         width: 100%;
         height: 100%;
@@ -29,19 +44,22 @@ div.actions {
     }
 
     div.play {
+        border: 1px solid;
         width: 100%;
         @include posessAllAvailableSpace();    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
         & img {
             width: 265px;
+            
+            &:active {
+                animation: animateCookie 0.1s;
+            }
         }
-    }
 
-    div.music {
-        @include posessAllAvailableSpace();    
         
-        & input {
-            display: none;
-        }
     }
     
 }
