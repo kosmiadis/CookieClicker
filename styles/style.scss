@@ -3,7 +3,7 @@
 @import "sections/actions.scss";
 
 html {
-    overflow-x: hidden;
+    overflow: hidden;
 }
 body {
     margin: 0;
@@ -15,8 +15,9 @@ body {
     radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
     background-size: 550px 600px, 350px 390px, 250px 400px, 150px 150px;
     background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    background-attachment: fixed;
     font-size: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
     & * {
         font-family: 'DynaPuff', cursive;
     }

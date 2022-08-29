@@ -7,7 +7,6 @@ div.starting-screen {
 
 div.actions {
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,7 +21,6 @@ div.actions div.click-count-container {
   display: none;
   padding: 2em;
   text-align: center;
-  border: 1px solid white;
   width: 100%;
 }
 
@@ -40,7 +38,6 @@ div.actions div.title {
 div.actions div.title p {
   color: white;
   padding: 1em;
-  border: 1px solid;
   font-size: 200%;
   align-self: start;
   font-weight: 900;
@@ -64,6 +61,10 @@ div.actions div.play img {
 }
 
 div.actions div.play-instructions-container {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
 }
@@ -88,7 +89,7 @@ div.actions div.play-instructions-container p {
 }
 
 html {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 body {
@@ -97,8 +98,9 @@ body {
   background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 40px), radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px), radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 30px);
   background-size: 550px 600px, 350px 390px, 250px 400px, 150px 150px;
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  background-attachment: fixed;
   font-size: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 body * {
