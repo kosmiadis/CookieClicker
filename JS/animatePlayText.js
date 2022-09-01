@@ -1,5 +1,6 @@
 const pressCookieText = document.querySelector('#animated-text')
 const titleText = document.querySelector('#cookie-clicker-title')
+const contactDiv = document.querySelector('.contact')
 
 function animateText (text) {
     text.style.opacity = '0.3'
@@ -15,6 +16,7 @@ setInterval(function animate () {
 function phadeOutText (title) {
     pressCookieText.style.display = 'none'
     title.style.display = 'none'
+    contactDiv.style.display = 'none'
     
 }
 

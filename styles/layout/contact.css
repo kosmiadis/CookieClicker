@@ -1,0 +1,24 @@
+div.contact-methods {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80%;
+  border: 2px solid;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+  border-radius: 10px;
+  border-top: 10px solid grey;
+}
+
+div.contact-methods div.contact-instagram {
+  padding: 1em;
+}
+
+div.contact-methods form#contact-form {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}

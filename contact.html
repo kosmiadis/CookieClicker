@@ -6,45 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookie Clicker | Contact
     </title>
-
+    <link rel="stylesheet" href="styles/style.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
     <script type="text/javascript">
         (function() {
-            // https://dashboard.emailjs.com/admin/account
             emailjs.init('l4zQWTRrqk99JTqf1');
         })();
     </script>
-
     <script type="text/javascript">
         
 
         window.onload = function() {
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
-                // generate a five digit number for the contact_number variable
+                
                 this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
+                
                 var templateParams = {
                     from_name: document.getElementById('contact-form').querySelector('#name').value,
                     message: document.getElementById('contact-form').querySelector('textarea').value,
                     email: document.getElementById('contact-form').querySelector('#email').value
                 };
-                /*
-                emailjs.sendForm('service_weq57xo', 'template_hlsoeyo', document.getElementById('contact-form'))
-                    .then(function() {
-                        console.log('SUCCESS!');
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                    });
-                */
 
                 emailjs.send('service_weq57xo', 'template_hlsoeyo', templateParams)
                     .then(function(response) {
                        console.log('SUCCESS!', response.status, response.text);
-                       document.getElementById('contact-form').querySelector('#name').value
-                       document.getElementById('contact-form').querySelector('textarea').value
-                       document.getElementById('contact-form').querySelector('#email').value
+                       document.getElementById('contact-form').querySelector('#name').value = ''
+                       document.getElementById('contact-form').querySelector('textarea').value = ''
+                       document.getElementById('contact-form').querySelector('#email').value = ''
                     }, function(error) {
                        console.log('FAILED...', error);
                     });
@@ -52,25 +41,30 @@
         }
     </script>
 
-    <style>
-        
-    </style>
 </head>
 <body>
 
-    <div id="loading-spin-animation">
+    <div class="contact-methods">
+
+        <div class="contact-instagram">
+            <a href="https://www.instagram.com/kosmiadis_sw/">
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+                </svg>
+            </a>
+        </div>
         
+        <form id="contact-form">
+            <input type="hidden" name="contact_number">
+            <label>Name</label>
+            <input type="text" name="user_name" id="name">
+            <label>Email</label>
+            <input type="email" name="user_email" id="email">
+            <label>Message</label>
+            <textarea name="message"></textarea>
+            <input type="submit" value="Send">
+        </form>
     </div>
 
-    <form id="contact-form">
-        <input type="hidden" name="contact_number">
-        <label>Name</label>
-        <input type="text" name="user_name" id="name">
-        <label>Email</label>
-        <input type="email" name="user_email" id="email">
-        <label>Message</label>
-        <textarea name="message"></textarea>
-        <input type="submit" value="Send">
-    </form>
 </body>
 </html>

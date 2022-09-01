@@ -28,7 +28,7 @@ div.actions div.title {
 div.actions div.title p {
   color: white;
   padding: 1em;
-  font-size: 200%;
+  font-size: 240%;
   align-self: start;
   font-weight: 900;
   transition: opacity 0.6s;
@@ -61,9 +61,14 @@ div.actions div.play-instructions-container {
 
 div.actions div.play-instructions-container p {
   color: white;
-  padding: 2em;
+  padding: 1em;
   font-size: 150%;
   transition: opacity 0.6s;
+}
+
+div.actions div.play-instructions-container div a {
+  text-decoration: none;
+  font-size: 100%;
 }
 
 @media screen and (min-width: 481px) {
