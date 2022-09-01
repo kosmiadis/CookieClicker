@@ -13,7 +13,6 @@ div.actions div.click-count-container {
   display: none;
   padding: 2em;
   text-align: center;
-  width: 100%;
 }
 
 div.actions div.click-count-container #counter {
@@ -22,7 +21,6 @@ div.actions div.click-count-container #counter {
 }
 
 div.actions div.title {
-  width: 100%;
   height: 100%;
   text-align: center;
 }
@@ -42,14 +40,14 @@ div.actions div.play {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 2em;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 80%;
 }
 
 div.actions div.play img {
-  width: 80%;
+  width: 100%;
 }
 
 div.actions div.play-instructions-container {
