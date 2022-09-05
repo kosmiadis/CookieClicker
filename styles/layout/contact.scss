@@ -2,7 +2,7 @@ div.contact-methods {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 80%;
+    width: 70%;
     border: 2px solid;
     background-color: white;
     display: flex;
@@ -14,10 +14,16 @@ div.contact-methods {
 
     div.contact-instagram {
         padding: 1em;
+        border-bottom: 5px solid rgb(69, 68, 68);
+        text-align: center;
+        
         svg {
             
         }    
+
     }
+
+
 
     form#contact-form {
         padding: 1em;
