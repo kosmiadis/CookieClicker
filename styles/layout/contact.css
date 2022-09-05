@@ -19,8 +19,9 @@ div.contact-methods * {
 
 div.contact-methods form#contact-form {
   padding: 1em;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 10px;
 }
 
 div.contact-methods form#contact-form input[type='submit'], div.contact-methods form#contact-form input[type='hidden'] {
@@ -29,13 +30,12 @@ div.contact-methods form#contact-form input[type='submit'], div.contact-methods 
 }
 
 div.contact-methods form#contact-form label {
-  margin-bottom: 3px;
   font-size: 120%;
+  font-weight: 500;
 }
 
 div.contact-methods form#contact-form input, div.contact-methods form#contact-form textarea {
   font-size: 1.3em;
-  margin-bottom: 1em;
   border: unset;
   background-color: #efe8e8;
   padding: 0.5em;
@@ -56,6 +56,7 @@ div.contact-methods form#contact-form p {
 }
 
 div.contact-methods form#contact-form input[type='submit'] {
+  margin-top: 20px;
   font-size: 130%;
   border: none;
   padding: 1em;
@@ -67,16 +68,26 @@ div.contact-methods form#contact-form input[type='submit']:hover {
   background-color: #cdcdcd;
 }
 
-@media screen and (min-width: 625px) {
+@media screen and (min-width: 481px) {
+  div.contact-methods {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 861px) {
+  div.contact-methods {
+    width: 50%;
+    max-width: 500px;
+  }
   div.contact-methods form#contact-form {
-    flex-direction: row;
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    grid-auto-rows: min-content;
-    /*grid-template-areas: 
-            "label input"
-            "label input"
-            "label input";
-            */
+    grid-template-columns: unset;
+    grid-template-columns: max-content 1fr;
+    grid-auto-rows: max-content;
+    align-items: center;
+    text-align: center;
+  }
+  div.contact-methods form#contact-form label {
+    grid-column-start: 1;
+    text-align: right;
   }
 }

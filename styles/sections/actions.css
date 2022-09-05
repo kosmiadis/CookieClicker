@@ -68,6 +68,7 @@ div.actions div.play-instructions-container p {
 
 div.actions div.play-instructions-container div a {
   text-decoration: none;
+  color: white;
   font-size: 100%;
 }
 
