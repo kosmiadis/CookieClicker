@@ -1,4 +1,7 @@
 div.contact-methods {
+    * {
+        font-family: 'Lato';
+    }
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -9,25 +12,50 @@ div.contact-methods {
     flex-direction: column;
     justify-content: center;
     padding: 1em;
-    border-radius: 10px;
-    border-top: 10px solid grey;
-
-    div.contact-instagram {
-        padding: 1em;
-        border-bottom: 5px solid rgb(69, 68, 68);
-        text-align: center;
-        
-        svg {
-            
-        }    
-
-    }
-
-
+    border-radius: 15px;
+    border-top: 15px solid rgb(205, 205, 205);
 
     form#contact-form {
         padding: 1em;
         display: flex;
         flex-direction: column;
+        
+        label {
+            margin-bottom: 3px;
+            font-size: 120%;
+        }
+        input, textarea {
+            font-size: 1.3em;
+            margin-bottom: 1em;
+            border: unset;
+            background-color: rgb(239, 232, 232);
+            padding: 0.5em;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        p {
+            font-size: 200%;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        input[type='submit'] {
+            font-size: 130%;
+            border: none;
+            padding: 1em;
+            transition: background-color 0.3s;
+
+            &:hover {
+                cursor: pointer;
+                background-color: rgb(205, 205, 205);
+            }
+        }
     }
 }
