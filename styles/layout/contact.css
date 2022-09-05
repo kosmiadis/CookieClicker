@@ -23,6 +23,11 @@ div.contact-methods form#contact-form {
   flex-direction: column;
 }
 
+div.contact-methods form#contact-form input[type='submit'], div.contact-methods form#contact-form input[type='hidden'] {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
 div.contact-methods form#contact-form label {
   margin-bottom: 3px;
   font-size: 120%;
@@ -60,4 +65,18 @@ div.contact-methods form#contact-form input[type='submit'] {
 div.contact-methods form#contact-form input[type='submit']:hover {
   cursor: pointer;
   background-color: #cdcdcd;
+}
+
+@media screen and (min-width: 625px) {
+  div.contact-methods form#contact-form {
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-auto-rows: min-content;
+    /*grid-template-areas: 
+            "label input"
+            "label input"
+            "label input";
+            */
+  }
 }

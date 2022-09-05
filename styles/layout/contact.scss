@@ -19,7 +19,12 @@ div.contact-methods {
         padding: 1em;
         display: flex;
         flex-direction: column;
-        
+
+        input[type='submit'], input[type='hidden'] {
+            grid-column-start: 1;
+            grid-column-end: -1;
+        }
+
         label {
             margin-bottom: 3px;
             font-size: 120%;
@@ -56,6 +61,20 @@ div.contact-methods {
                 cursor: pointer;
                 background-color: rgb(205, 205, 205);
             }
+        }
+    }
+
+    @media screen and (min-width: 625px) {
+        form#contact-form {
+            flex-direction: row;
+            display: grid;
+            grid-template-columns: 1fr max-content;
+            grid-auto-rows: min-content;
+            /*grid-template-areas: 
+            "label input"
+            "label input"
+            "label input";
+            */
         }
     }
 }
