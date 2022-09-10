@@ -1,8 +1,6 @@
 const cookieImg = document.querySelector('#cookie')
 let clickIndex = 0
-/*const cookieCrackSoundEffect = new Audio('sfx/cookie-crack.wav');
-cookieCrackSoundEffect.play()
-*/
+
 function animateCookie (cookie) {
     if (clickIndex == 0) {
         phadeOutText(titleText)
@@ -13,7 +11,7 @@ function animateCookie (cookie) {
         cookie.style.transform = 'scale(1)'
     },50)
     clickIndex += 1
-    updateCounter()
+    counter.updateCounter()
     
 }
 
