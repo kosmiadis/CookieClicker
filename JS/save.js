@@ -1,16 +1,25 @@
 const storeData = (() => {
     const saveCountsOnExit = () => {
-        localStorage.setItem('COUNTINDEX', JSON.stringify(COUNTERINDEX));
+        localStorage.setItem('COUNTERINDEX', JSON.stringify(COUNTERINDEX));
     }
     return {saveCountsOnExit}
-})
+})();
 
-const SAVE = storeData()
+const loadData = (() => {
+    const loadCounts = () => {
+        //try to load countIndex if there is any
+        try {
+            COUNTERINDEX = JSON.parse(localStorage.COUNTERINDEX)
+        }
+        //if there is not any set it to 0
+        catch (e) {
+            let count = localStorage.setItem('COUNTERINDEX', 0)
+            COUNTERINDEX = count 
+        }
+    }
+    return {loadCounts}
+})();
 
-document.addEventListener('unload', e => {
-    SAVE.saveCountsOnExit()
-})
 
-document.addEventListener('load', e => {
-    counter.loadCounts()
-})
+
+

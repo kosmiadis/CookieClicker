@@ -3,7 +3,7 @@ const titleText = document.querySelector('#cookie-clicker-title')
 const contactDiv = document.querySelector('.contact')
 
 function animateText (text) {
-    text.style.opacity = '0.3'
+    text.style.opacity = '0.2'
     setTimeout(function setOpacityToDefault () {
         text.style.opacity = '1'
     }, 400)
