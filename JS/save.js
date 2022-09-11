@@ -21,5 +21,13 @@ const loadData = (() => {
 })();
 
 
+const clearData = (() => {
+    const clearData = () => {
+        localStorage.clear()
+    }
+    return {clearData}
+})();
+
+
 
 
