@@ -51,6 +51,10 @@ div.actions {
             width: 100%;
         }
 
+        & img::selection {
+            background-color: transparent;
+        }
+
         
     }
 

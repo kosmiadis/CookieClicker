@@ -1,21 +1,33 @@
 const cookieImg = document.querySelector('#cookie')
 let clickIndex = 0
 
-function animateCookie (cookie) {
-    if (clickIndex == 0) {
-        phadeOutText(titleText)
-        clickCounterContainer.style.display = 'block'
+
+const cookie = (() => {
+
+    const animateCookie = (cookie) => {
+        if (clickIndex == 0) {
+            allTexts.phadeOutText(titleText)
+            clickCounterContainer.style.display = 'block'
+        }
+        cookie.style.transform = 'scale(1.05)'
+        setTimeout(function getToNormalSize() {
+            cookie.style.transform = 'scale(1)'
+        },50)
+        if (clickIndex === 1) {
+        }
+        else {
+            clickIndex++
+        }
     }
-    cookie.style.transform = 'scale(1.05)'
-    setTimeout(function getToNormalSize() {
-        cookie.style.transform = 'scale(1)'
-    },50)
-    clickIndex += 1
-    counter.updateCounter()
-    
-}
+
+    const increamentCounter = () => {
+        counter.updateCounter()
+    }
+    return {animateCookie, increamentCounter}
+})();
+
 
 cookieImg.addEventListener('click', e => {
-    animateCookie(cookieImg)
-
+    cookie.animateCookie(cookieImg)
+    cookie.increamentCounter()
 })

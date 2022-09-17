@@ -50,6 +50,10 @@ div.actions div.play img {
   width: 100%;
 }
 
+div.actions div.play img::selection {
+  background-color: transparent;
+}
+
 div.actions div.play-instructions-container {
   position: absolute;
   top: 90%;

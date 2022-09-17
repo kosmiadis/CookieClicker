@@ -1,13 +1,37 @@
+
+const appWindow = (() => {
+    const saveDATA = () => {
+        storeData.saveCountsOnExit()        
+    }
+
+    const loadDATA = () => {
+        loadData.loadCounts()
+        allTexts.animateText(pressCookieText)
+    
+    }
+    return {saveDATA, loadDATA}
+})()
+
 window.addEventListener('unload', e => {
-    storeData.saveCountsOnExit()
+    appWindow.saveDATA()
 })
 
 window.addEventListener('load', e => {
-    loadData.loadCounts()
-})
+    appWindow.loadDATA()
+    console.log('loaded')
+    window.addEventListener('keydown', e => {
+        if (e.keyCode === 27) {
+            console.log('it works')
+            allTexts.phadeInText()
+            allTexts.animateText()  
+        }
+        if (e.key === 'Enter') {
+            document.body.style.transform = 'translateX(100%)'
+        }
+    })
 
-window.addEventListener('keydown', e => {
-    if (e.keyCode === 27) {
-        
-    }
-})
+}) 
+
+
+    
+
