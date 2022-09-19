@@ -25,9 +25,6 @@ window.addEventListener('load', e => {
             allTexts.phadeInText()
             allTexts.animateText()  
         }
-        if (e.key === 'Enter') {
-            document.body.style.transform = 'translateX(100%)'
-        }
     })
 
 }) 

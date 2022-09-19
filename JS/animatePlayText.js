@@ -33,7 +33,7 @@ const allTexts = (() => {
         pressCookieText.style.display = 'block'
         titleText.style.display = 'block'
         contactDiv.style.display = 'block'  
-        allTexts.animateText()  
+        
     
     }
     return {animateText, startAnimation, phadeOutText, phadeInText}

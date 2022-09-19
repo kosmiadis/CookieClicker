@@ -12,40 +12,9 @@
         <script defer src="JS/animatePlayText.js"></script>
         <script defer src="JS/counter.js"></script>
         <script defer src="JS/save.js"></script>
+        <script defer src="JS/options.js"></script>
         <script defer src="JS/window.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-        <script type="text/javascript">
-            (function() {
-                emailjs.init('l4zQWTRrqk99JTqf1');
-            })();
-        </script>
-        <script type="text/javascript">
-
-
-            window.onload = function() {
-                document.getElementById('contact-form').addEventListener('submit', function(event) {
-                    event.preventDefault();
-
-                    this.contact_number.value = Math.random() * 100000 | 0;
-
-                    var templateParams = {
-                        from_name: document.getElementById('contact-form').querySelector('#name').value,
-                        message: document.getElementById('contact-form').querySelector('textarea').value,
-                        email: document.getElementById('contact-form').querySelector('#email').value
-                    };
-
-                    emailjs.send('service_weq57xo', 'template_hlsoeyo', templateParams)
-                        .then(function(response) {
-                           console.log('SUCCESS!', response.status, response.text);
-                           document.getElementById('contact-form').querySelector('#name').value = ''
-                           document.getElementById('contact-form').querySelector('textarea').value = ''
-                           document.getElementById('contact-form').querySelector('#email').value = ''
-                        }, function(error) {
-                           console.log('FAILED...', error);
-                        });
-                });
-            }
-        </script>
+        
     </head>
     
     <body>
@@ -81,24 +50,6 @@
                 </svg>
             </div>
             
-        </div>
-        
-        <div class="options">
-            <div class="contact-methods">
-        
-                <form id="contact-form">
-                    <p>Contact</p>
-                    <label>Name</label>
-                    <input type="text" name="user_name" id="name" required>
-                    <label>Email</label>
-                    <input type="email" name="user_email" id="email" required>
-                    <label>Message</label>
-                    <textarea name="message" required></textarea>
-                    <input type="submit" value="Send">
-                    <input type="hidden" name="contact_number">
-                    
-                </form>
-            </div>
         </div>
 
     </body>
