@@ -1,7 +1,7 @@
-const optionGear = document.querySelector('#optionGear')
-const optionsMenu = document.querySelector('.optionsMenu')
+const settingsBtn = document.querySelector('#settingsLabel')
 
-const optionMenu = () => {
+const optionMenu = (() => {
+
     const openMenu = () => {
 
     }
@@ -10,10 +10,4 @@ const optionMenu = () => {
 
     }
     return {openMenu, closeMenu}
-}
-
-optionGear.addEventListener('click', e => {
-        e.target.style.transform = 'rotate(45deg)'
-        optionsMenu.style.display = 'block'
-        optionsMenu.style.opacity = '1'
-    })
+})();

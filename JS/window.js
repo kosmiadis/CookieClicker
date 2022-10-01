@@ -18,10 +18,8 @@ window.addEventListener('unload', e => {
 
 window.addEventListener('load', e => {
     appWindow.loadDATA()
-    console.log('loaded')
     window.addEventListener('keydown', e => {
         if (e.keyCode === 27) {
-            console.log('it works')
             allTexts.phadeInText()
             allTexts.animateText()  
         }

@@ -189,6 +189,38 @@ div.contact-methods form#contact-form input[type='submit']:hover {
   }
 }
 
+div.options {
+  width: 100%;
+  position: absolute;
+}
+
+div.options input[type='checkbox'] {
+  display: none;
+}
+
+div.options label {
+  padding: 1em;
+}
+
+div.options label img {
+  width: 60px;
+  transition: transform 0.3s;
+}
+
+div.options label img:hover {
+  cursor: pointer;
+}
+
+div.options input:checked ~ label img {
+  transform: rotate(60deg);
+}
+
+@media screen and (max-width: 581px) {
+  div.options label {
+    display: none;
+  }
+}
+
 body {
   margin: 0;
   background-color: black;

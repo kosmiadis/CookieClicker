@@ -1,0 +1,40 @@
+div.options {
+    width: 100%;
+    position: absolute;
+
+    input[type='checkbox'] {
+        display: none;
+    }
+
+    label {
+        padding: 1em;        
+        
+        img {
+            width: 60px;
+            transition: transform 0.3s;
+            &:hover {
+                cursor: pointer;
+            }
+    
+        }
+    }
+
+    input:checked {
+
+        ~ label img {
+            transform: rotate(60deg);
+        }
+    }
+
+    
+    
+}
+
+@media screen and (max-width: 581px) {
+    div.options {
+        label {
+            display: none;
+        }
+    }
+}
+
