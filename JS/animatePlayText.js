@@ -1,6 +1,6 @@
 const pressCookieText = document.querySelector('#animated-text')
 const titleText = document.querySelector('#cookie-clicker-title')
-const contactDiv = document.querySelector('.contact')
+const contactDiv = document.querySelector('.contactDiv')
 
 const allTexts = (() => {
     const animateText = (text) => {
